@@ -43,26 +43,32 @@ formulario.addEventListener('submit', function(evento){
         return; //--- corta la ejecucion del codigo
     }
     mostrarMensaje("Datos enviados correctamente");
+
     function mostrarMensaje(mensaje){
-        let alerta = document.createElement("div");
-        alerta.textContent = mensaje
-        alerta.classList.add("correcto")
+        let alerta = document.createElement('p'); 
+        alerta.textContent = mensaje; 
+        alerta.classList.add('correcto');
         formulario.appendChild(alerta);
         setTimeout(() => {
             alerta.remove();
-        }, 3000)
+        }, 5000)
+
     }
+
 
     function mostrarError(mensaje){
         //console.log(mensaje);
-        let error = document.createElement('div'); 
+        let error = document.createElement('p'); 
         error.textContent = mensaje; 
         error.classList.add('error');
         // console.log(error);
         formulario.appendChild(error);
+
         setTimeout(() => {
             error.remove();
-        }, 5000);
+        }, 5000)
+
+
     }
 
 
